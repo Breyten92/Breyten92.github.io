@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    </title>
+    <link rel="stylesheet" type="text/css" href="style breyten.css">
+ </head>
+ <body>
+ 
+      
+		
+        <!-- Headings -->
+        <header id="main-header">
+        <h2>MSI - Portfolio Breyten Kouwenberg</h2>
+    </header>
+
+   <!-- Navigation bar -->
+    <!DOCTYPE html>
+    <html>
+    <head> 
+  
+    </head>
+    <body>
+    
+    <ul>
+      <div id="Competenties" class="tabcontent">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Competenties.html">Competenties</a></li>
+      <li><a href="Smart Connection.html">Smart Connection</a></li>
+      <li><a href="Workshops en bezoeken.html">Workshops en bezoeken</a></li>
+      <li><a href="Documenten.html">Documenten</a></li>
+    </ul>
+     
+    </body>
+    </html>
+<!-- Navigation bar -->
+
+<html>
+
+<h3>Tijdens de lessen van Smart Connection heb ik geleerd om HTML te coderen. Zie onderstaande foto.</h3>
+
+  <div class="Foto1"
+        <a href="afbeelding foto.png ">
+			<img src="Afbeelding code.png" alt="My foto" width="800">
+        </a>
+        </div>
+
+
+
+        <h3>Via CSS heb ik alle opmaak van de website geregeld. Bij de lessen werd me geleerd hoe ik dit het beste kon toepassen. Zie onderstaand voorbeeld.</h3>
+
+        <div class="Foto1"
+        <a href="afbeelding foto2.png ">
+			<img src="Afbeelding code2.png" alt="My foto" width="800">
+        </a>
+        </div>  
+
+        <h3>Hieronder laat de API zien, die vanuit weerlive.nl het weer ophaalt, wat voor soort weer het vandaag in Amsterdam is.</h3>
+
+        <div class="Foto1"
+        <a href="api.png ">
+			<img src="API.png" alt="My foto" width="800">
+        </a>
+        </div>  
+
+      
+
+
+
+<h1>API</h1>
+<br>Hieronder laat de API zien, die vanuit weerlive.nl het weer ophaalt, wat voor soort weer het vandaag in Amsterdam is.<br> 
+
+<div>
+
+  <body>
+    <script>
+      (function() {
+        var newXHR = null;
+
+        function sendXHR(type, url, data, callback) {
+          newXHR = new XMLHttpRequest() || new window.ActiveXObject("Microsoft.XMLHTTP");
+          newXHR.open(type, url, true);
+          newXHR.send(data);
+          newXHR.onreadystatechange = function() { // Use onreadystatechange instead onload.
+            if (this.status === 200 && this.readyState === 4) {
+              callback(this.response);
+            }
+          };
+        }
+
+        sendXHR("GET", "https://weerlive.nl/api/json-data-10min.php?key=demo&locatie=Amsterdam", null, function(response) {
+          var data = JSON.parse(response);
+          document.getElementById("output").innerHTML = data.liveweer[0].samenv;
+        });
+      }());
+
+    </script>
+
+    <div id="container">
+      <div id="output">
+      </div>
+
+
+  </body>
+
+</html>
+  
+</p>
+</div>
+</section>
